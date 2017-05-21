@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JourneyLynn</title>
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/skin1.css" id="changeSkin">
+        
+    </head>
+    <body>
+    <!-- head部分 -->
+        <div class="hNav skin clear" id="hNavFixed">
+            <a href="#script" class="skin logo" title="www.journeylynn.com">J L</a>
+            <a href="#script" class="skin logo1">步履不停 逐心而行</a>
+            <ul class="clear" id="hNavScroll">
+                <li>
+                    <a href="index.html"><div class="nav-on">HOME</div><div class="nav-off">首页</div></a>
+                </li>
+                <li id="hHiddenC">
+                    <a href="#script"><div class="nav-on">LOGO</div><div class="nav-off">日志</div></a>
+                </li>
+                <li>
+                    <a href="gallery.html"><div class="nav-on">GALLERY</div><div class="nav-off">画廊</div></a>
+                </li>
+                <li>
+                    <a href="community.html"><div class="nav-on">COMMUNITY</div><div class="nav-off">社区</div></a>
+                </li>
+                <li>
+                    <a href="app.html"><div class="nav-on">APP</div><div class="nav-off">APP</div></a>
+                </li>
+                <li>
+                    <a href="contacts.html"><div class="nav-on">CONTACTS</div><div class="nav-off">联系</div></a>
+                </li>
+                <li id="hlogin">
+                    <a href="#script"><div class="nav-on">LOG IN</div><div class="nav-off">登录</div></a>
+                </li>
+            </ul>
+        </div>
+        <ul class="hHidden font" id="hHidden">
+            <li><a href="LogoLynn.html" class="font">Lynn</a></li>
+            <li>Json</li>
+            <li>Tom</li>
+            <li>Jone</li>
+        </ul>
+        <div class="hLogIn pa clear" id="hLogIn">
+            <h3 class="Login"><span class="log-in">LOG IN</span> or <span class="sign-up">SIGN UP</span></h3>
+            <p class="float fl">
+                <label for="login"><img src="img/sign_2.png" alt=""> Username</label>
+                <input type="text" name="login" placeholder="Username or email">
+            </p>
+            <div class="float fl">
+                <label for="password"><img src="img/sign_3.png" alt=""> Password</label>
+                <input type="password" name="password" placeholder="Password" class="showpassword">
+            </div>
+            <div class="remembeMe"><input type="checkbox" value=""><span>Remember me</span></div>
+            <div class="clearfix clear"> 
+                <a href="register.html" class="log-twitter">Register</a>    
+                <input type="submit" name="submit" value="Log in">
+            </div>
+        </div>
+        <script type="text/javascript">
+            var oUlHNav=document.getElementById('hNavScroll');
+            var aLiHN=oUlHNav.getElementsByTagName('li');
+            var timer=null;
+            var timerh=null;
+            var timerL=null;
+            for(var i=0;i<aLiHN.length;i++){
+                aLiHN[i].index=i;
+                aLiHN[i].onmouseover=function(){
+                    this.style.top='-29px';
+                }
+                aLiHN[i].onmouseout=function(){
+                    // var a =this.index;
+                    // timer0=setTimeout(function(){
+                        this.style.top='0';
+                    // }, 500);
+                }
+            }
+            hHidden.onmouseover=hHiddenC.onclick=function(){
+                clearTimeout(timerh);
+                hHidden.style.display='block';
+                hHidden.style.position='fixed';
+            }
+            hHidden.onmouseout=function(){
+                timerh=setTimeout(function(){
+                    hHidden.style.display='none';
+                },1000)
+            }
+            hLogIn.onmouseover=hlogin.onclick=function(){
+                clearTimeout(timerL)
+                hLogIn.style.display='block';
+                hLogIn.style.position='fixed';
+            }
+            hLogIn.onmouseout=function(){
+                timerL=setTimeout(function(){
+                hLogIn.style.display="none";
+                }, 1000)
+            }
+            </script>
+    <!-- main部分 -->
+    <!-- banner部分 -->
+    <div class="mBanner pr" id="mB">
+        <ul class="mB1 pa clear">
+            <li class="mBLi1">
+                <h3><span>1</span>/May.2017</h3>
+                <h3>我要做一个旅行的网页 banner这里肯定得有点字吧</h3>
+            </li>
+            <li class="mBLi2">
+                <h3><span>2</span>/May.2017</h3>
+                <h3>但是，我想了很久 实在不知道该加点什么</h3>
+            </li>
+            <li class="mBLi3">
+                <h3><span>3</span>/May.2017</h3>
+                <h3>写点诗歌太文艺了 都社会主义了</h3>
+            </li>
+            <li class="mBLi4">
+                <h3><span>4</span>/May.2017</h3>
+                <h3>抄点歌词也太矫情 一把年纪了</h3>
+            </li>
+            <li class="mBLi5">
+                <h3><span>5</span>/May.2017</h3>
+                <h3>想着想着 banner终于填满了 完工</h3>
+            </li>
+        </ul>
+        <ul class="mB2 pa">
+            <li><img src="img/mBanner_55.jpg" alt=""></li>
+            <li><img src="img/mBanner_22.jpg" alt=""></li>
+            <li><img src="img/mBanner_33.jpg" alt=""></li>
+            <li><img src="img/mBanner_44.jpg" alt=""></li>
+            <li><img src="img/mBanner_11.jpg" alt=""></li>
+        </ul>
+        <div class="search-form">
+            <form method="get" action="/search" id="mbSearch">
+                <input name="q" type="text" size="40" placeholder="Search the word with your heart" id="mbCheck" class="font">
+                <input class="skin" type="button" name="Submit" value="Search">
+            </form>
+        </div>
+        <!-- <script>
+            mbCheck.onfocus=function(){
+                mbCheck.value='';
+            }
+            mbCheck.onblur=function(){
+                mbCheck.value='Search the word with your heart';
+            }
+        </script> -->
+    </div>
+<!-- main about部分 -->
+    <div class="main">
+        <div class="main1-1 border">
+            <b>About Us</b>
+            <p>Nulla eget mauris quis elit mollis ornare vitae ut odio. Cras tincidunt, augue vitae sollicitudin commodo, quam elit varius est, et ornare ante massa quis tellus. Mauris nec lacinia nisl. Curabitur tempus tellus et vulputate vestibulum.</p>
+        </div>
+    </div>
+    <div class="clear main11">
+        <div class="main1-2">
+            <div class="pr"> 
+                <img src="img/1-1.jpg" alt="">
+                <div class="borderM borderM1 pa"></div>
+            </div>
+            <span class="font">Lorem ipsum dolor</span>
+            <p>Lorem ipsum dolor sit amet consectetuer</p>
+        </div>
+        <div class="main1-3">
+            <div class="pr"> 
+                <img src="img/1-2.jpg" alt="">
+                <div class="borderM borderM2 pa"></div>
+            </div>
+            <span class="font">Lorem ipsum dolor</span>
+            <p>Lorem ipsum dolor sit amet consectetuer</p>
+        </div>
+        <div class="main1-4">
+            <div class="pr"> 
+                <img src="img/1-3.jpg" alt="">
+                <div class="borderM borderM3 pa"></div>
+            </div>
+            <span class="font">Lorem ipsum dolor</span>
+            <p>Lorem ipsum dolor sit amet consectetuer</p>
+        </div>
+        <div class="main1-5">
+            <div class="pr"> 
+                <img src="img/1-4.jpg" alt="">
+                <div class="borderM borderM4 pa"></div>
+            </div>
+            <span class="font">Lorem ipsum dolor</span><br>
+            <p>Lorem ipsum dolor sit amet consectetuer</p>
+        </div>
+    </div>
+    <!-- services -->
+    <div class="main2-1 border">
+        <b>SERVICES</b>
+    </div>
+    <div class="clear">
+        <div class="main2-6">
+            <div class="clear">
+                <div class="main2-2 border1">
+                    <img src="img/1-5.png" alt="">
+                </div>
+                <div class="main2-3">
+                    <b class="font">Lorem ipsum</b><br>
+                    <p>Nulla eget mauris quis elit mollis ornare vitae ut odio. Cras tincidunt, augue vitae sollicitudin commodo, quam elit varius est, et ornare ante massa quis tellus.
+                    </p>
+                </div>
+            </div>
+            <div class="clear">
+                <div class="main2-2 border1">
+                    <img src="img/1-6.png" alt="">
+                </div>
+                <div class="main2-4">
+                    <b class="font">Lorem ipsum</b><br>
+                    <p>Nulla eget mauris quis elit mollis ornare vitae ut odio. Cras tincidunt, augue vitae sollicitudin commodo, quam elit varius est, et ornare ante massa quis tellus.
+                    </p>
+                </div>
+            </div>
+            <div class="clear">
+                <div class="main2-2 border1">
+                    <img src="img/1-7.png" alt="">
+                </div>
+                <div class="main2-5">
+                    <b class="font">Lorem ipsum</b><br>
+                    <p>Nulla eget mauris quis elit mollis ornare vitae ut odio. Cras tincidunt, augue vitae sollicitudin commodo, quam elit varius est, et ornare ante massa quis tellus.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="main3-3 pr">
+            <div class="cub">
+                <img src="img/1-8.png" alt="" class="one">
+                <img src="img/1-9.png" alt="" class="two">
+                <img src="img/1-10.png" alt="" class="three">
+                <img src="img/1-11.png" alt="" class="four">
+                <img src="img/1-12.png" alt="" class="five">
+                <img src="img/1-13.png" alt="" class="six">
+            </div>  
+                <b class="font seven">Lorem ipsum</b>
+        </div>
+       </div>
+       <!-- bg2 -->
+       <div class="content1-1">
+            <div class="content1-1-1 pr">
+                <ul class="content1-2 pr">
+                    <li class="skin line1"></li>
+                    <li class="skin line2"></li>
+                    <li class="skin line3"></li>
+                    <li class="skin line4"></li>
+                    <li class="skin line5"></li>
+                    <li class="skin line6"></li>
+                    <li class="skin line7"></li>
+                    <li class="skin line8"></li>
+                </ul>
+                <div class="content1-2-2 pa"></div>
+               <div class="content1-6 pr">
+                   <h3>Enjoy Your Journey</h3>
+                    <h2>Journey Lynn</h2>
+               </div>
+           </div>
+       </div>
+       <!-- 案例展示 -->
+       <div class="content2-1">
+           <div class="content2-2 border">
+               <b>Lorem ipsum dolor</b>
+               <p>Nulla eget mauris quis elit mollis ornare vitae ut odio. Cras tincidunt, augue vitae sollicitudin commodo, quam elit varius est, et ornare ante massa quis tellus. Mauris nec lacinia nisl. Curabitur tempus tellus et vulputate vestibulum.</p>
+           </div>
+       </div>
+       <div class="content2-3">
+           <ul class="clear hover1" id="select1">
+               <li>PARIS</li>
+               <li>NEW YORK</li>
+               <li>LONDON</li>
+               <li>ROME</li>
+               <li>SYDNEY</li>
+           </ul>
+       </div>
+       <div class="content2-6 clear">
+            <div class="content2-4 pr">
+                <a href="#script">
+                    <img src="img/2-3.jpg" alt="">
+                    <div class="bgC2 pa">PARIS XXX</div>
+                </a>
+            </div>
+            <div class="content2-5">
+                <a href="#script">
+                    <img src="img/2-4.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <img src="img/2-5.jpg" alt="">
+                </a>
+                <div>
+                    <a href="#script">
+                        <img src="img/2-6.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content2-6 clear contentNone">
+            <div class="content2-4 pr">
+                <a href="#script">
+                    <img src="img/2-7.jpg" alt="">
+                    <div class="bgC2 pa">NEW YORK XXX</div>
+                </a>
+            </div>
+            <div class="content2-5">
+                <a href="#script">
+                    <img src="img/2-8.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <img src="img/2-9.jpg" alt="">
+                </a>
+                <div>
+                    <a href="#script">
+                        <img src="img/2-10.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content2-6 clear contentNone">
+            <div class="content2-4 pr">
+                <a href="#script">
+                    <img src="img/2-11.jpg" alt="">
+                    <div class="bgC2 pa">LONDON XXX</div>
+                </a>
+            </div>
+            <div class="content2-5">
+                <a href="#script">
+                    <img src="img/2-12.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <img src="img/2-13.jpg" alt="">
+                </a>
+                <div>
+                    <a href="#script">
+                        <img src="img/2-14.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content2-6 clear contentNone">
+            <div class="content2-4 pr">
+                <a href="#script">
+                    <img src="img/2-15.jpg" alt="">
+                    <div class="bgC2 pa">ROME XXX</div>
+                </a>
+            </div>
+            <div class="content2-5">
+                <a href="#script">
+                    <img src="img/2-16.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <img src="img/2-17.jpg" alt="">
+                </a>
+                <div>
+                    <a href="#script">
+                        <img src="img/2-18.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content2-6 clear contentNone">
+            <div class="content2-4 pr">
+                <a href="#script">
+                    <img src="img/2-19.jpg" alt="">
+                    <div class="bgC2 pa">SYDNEY XXX</div>
+                </a>
+            </div>
+            <div class="content2-5">
+                <a href="#script">
+                    <img src="img/2-20.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <img src="img/2-21.jpg" alt="">
+                </a>
+                <div>
+                    <a href="#script">
+                        <img src="img/2-22.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#script" class="content2-7">More Destination</a>
+<!-- 精英导游 -->
+        <div class="guild1-1 border">
+            <b>Tour Guide</b>
+            <p>Nulla eget mauris quis elit mollis ornare vitae ut odio. Cras tincidunt, augue vitae sollicitudin commodo, quam elit varius est, et ornare ante massa quis tellus. Mauris nec lacinia nisl. Curabitur tempus tellus et vulputate vestibulum.</p>
+         </div>
+         <div class="d clear">
+                 <a href="#script" class="guild1-7" id="gLeft">
+                     < 
+                 </a>
+            <div class="guild1-2 pr">
+             <div class="guild1-4 pr" id="gGo">
+                 <a href="#script">
+                    <span class="guild1-5 guildBg">Tom<br>London Guide<br><div>+</div></span>
+                    <img src="img/3-1.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <span class="guild1-5 guildBg">Tom<br>London Guide<br><div>+</div></span>
+                    <img src="img/3-2.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <span class="guild1-5 guildBg">Tom<br>London Guide<br><div>+</div></span>
+                    <img src="img/3-3.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <span class="guild1-5 guildBg">Tom<br>London Guide<br><div>+</div></span>
+                    <img src="img/3-4.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <span class="guild1-5 guildBg">Tom<br>London Guide<br><div>+</div></span>
+                    <img src="img/3-5.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <span class="guild1-5 guildBg">Tom<br>London Guide<br><div>+</div></span>
+                    <img src="img/3-6.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <span class="guild1-5 guildBg">Tom<br>London Guide<br><div>+</div></span>
+                    <img src="img/3-7.jpg" alt="">
+                </a>
+                <a href="#script">
+                    <span class="guild1-5 guildBg">Tom<br>London Guide<br><div>+</div></span>
+                    <img src="img/3-8.jpg" alt="">
+                </a>                                 
+            </div>
+            </div>           
+            <a href="#script" class="guild1-3" id="gRight">
+                >
+            </a>
+         </div>
+        <div class="guild2-1">
+            <div class="guild2-2">
+                <h3 class="font">Journey Lynn</h3>
+                <h4>Enjoy Your Journey</h4>
+            </div>
+            <div class="guild2-3">
+                <img src="img/3-1.jpg" alt="">
+                <img src="img/3-4.jpg" alt="">
+                <img src="img/3-7.jpg" alt="">
+            </div>
+            <div class="guild2-4">
+                <p>-Lorem ipsum dolor-</p>
+                <span>Lorem ipsum dolor</span>
+            </div>
+            <div class="guild2-5">
+                <span>Nulla eget mauris quis elit mollis ornare vitae ut odio. Cras tincidunt, augue vitae sollicitudin commodo, quam elit varius est, et ornare ante massa quis tellus. Mauris nec lacinia nisl. .<br>Nulla eget mauris quis elit mollis ornare vitae ut odio. </span>
+            </div>
+        </div>
+<!-- footer部分 -->
+        <div class="bottom2-1 clear">
+            <div class="bottom2-2 clear">
+                <a href="#script"><h4>Lorem ipsum</h4></a>
+                <div class="bottom2-6"></div>
+                <div class="bottom2-7"></div>
+                <span>idunt, augue vitae sollicitudin commodo, quam elit varius est, et ornare ante massa quis tellus. Mauris nec lacinia nisl. Nulla eget mauris quis elit mollis ornare vitae ut odio.
+                </span>
+               <a href="#script"> <p>More→</p></a>
+            </div>
+            <div class="bottom2-3 clear">
+                <a href="#script"><h4>Lorem ipsum</h4></a>
+                <div class="bottom2-6"></div>
+                <div class="bottom2-7"></div>
+                <ul>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                </ul>
+            </div>
+            <div class="bottom2-4 clear">
+                <a href="#script"><h4>Lorem ipsum</h4></a>
+                <div class="bottom2-6"></div>
+                <div class="bottom2-7"></div>
+                <ul>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                </ul>
+            </div>
+            <ul class="bottom2-5">
+                <li><img src="img/sina.jpg" alt=""><p>-官方微博-</p></li>
+                <li><img src="img/wechat.jpg" alt=""><p>-公众号-</p></li>
+            </ul>
+        </div>
+<!-- out部分 -->
+<!-- sideBarLeft部分 -->
+    <div class="sBL" id="sBL">
+        <span class="font">&nbsp;&nbsp;SKIN</span>
+        <p >change the skin</p>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<!-- sideBarRight部分 -->
+    <div class="sBRS" id="sBRS">
+        <img src="img/star2.png" title="收藏" alt="">
+    </div>
+    <script type="text/javascript">
+    sBRS.onmousedown = function(e){
+        var e = e || window.event;
+        var diffX = e.clientX - sBRS.offsetLeft;
+        var diffY = e.clientY - sBRS.offsetTop;
+        document.onmousemove = function(e){
+            var e = e||window.event;
+            sBRS.style.left = e.clientX - diffX + 'px';
+            sBRS.style.top = e.clientY -diffY + 'px';
+        }
+        document.onmouseup = function(){
+            document.onmousemove = null;
+            document.onmouseup = null;
+        }
+    }
+//         sBRS.onclick=function addFavorite() {
+//     var url = window.location;
+//     var title = document.title;
+//     var ua = navigator.userAgent.toLowerCase();
+
+//     if (ua.indexOf("360se") > -1) {
+//         alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+//     }
+//     else if (ua.indexOf("msie 8") > -1) {
+//         window.external.AddToFavoritesBar(url, title); //IE8
+//     }
+//     else if (document.all) {
+//   try{
+//    window.external.addFavorite(url, title);
+//   }catch(e){
+//    alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+//   }
+//     }
+//     else if (window.sidebar) {
+//         window.sidebar.addPanel(title, url, "");
+//     }
+//     else {
+//   alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+//     }
+// }
+        </script>
+    <a href="#" class="sBRA" id="sBRA">
+        <img src="img/airplane.png" title="ToTop" alt="">
+    </a>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/changeSkin.js"></script>
+    <script type="text/javascript" src="js/convas.js"></script>
+    </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+        <meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+        <meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+        <title>JourneyLynn</title>
+        <link rel="stylesheet" type="text/css" href="css/base.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/contacts.css">
+        <link rel="stylesheet" type="text/css" href="css/skin1.css" id="changeSkin">
+        <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    </head>
+    <body>
+    <!-- head部分 -->
+        <div class="hNav skin clear" id="hNavFixed">
+            <a href="#script" class="skin logo" title="www.journeylynn.com">J L</a>
+            <a href="#script" class="skin logo1">步履不停 逐心而行</a>
+            <ul class="clear" id="hNavScroll">
+                <li>
+                    <a href="index.html"><div class="nav-on">HOME</div><div class="nav-off">首页</div></a>
+                </li>
+                <li id="hHiddenC">
+                    <a href="#script"><div class="nav-on">LOGO</div><div class="nav-off">日志</div></a>
+                </li>
+                <li>
+                    <a href="gallery.html"><div class="nav-on">GALLERY</div><div class="nav-off">画廊</div></a>
+                </li>
+                <li>
+                    <a href="community.html"><div class="nav-on">COMMUNITY</div><div class="nav-off">社区</div></a>
+                </li>
+                <li>
+                    <a href="app.html"><div class="nav-on">APP</div><div class="nav-off">APP</div></a>
+                </li>
+                <li>
+                    <a href="contacts.html"><div class="nav-on">CONTACTS</div><div class="nav-off">联系</div></a>
+                </li>
+                <li id="hlogin">
+                    <a href="#script"><div class="nav-on">LOG IN</div><div class="nav-off">登录</div></a>
+                </li>
+            </ul>
+            </div>
+            <ul class="hHidden font" id="hHidden">
+                <li><a href="LogoLynn.html" class="font">Lynn</a></li>
+                <li>Json</li>
+                <li>Tom</li>
+                <li>Jone</li>
+            </ul>
+            <div class="hLogIn pa clear" id="hLogIn">
+            <h3 class="Login"><span class="log-in">LOG IN</span> or <span class="sign-up">SIGN UP</span></h3>
+            <p class="float fl">
+                <label for="login"><img src="img/sign_2.png" alt=""> Username</label>
+                <input type="text" name="login" placeholder="Username or email">
+            </p>
+            <div class="float fl">
+                <label for="password"><img src="img/sign_3.png" alt=""> Password</label>
+                <input type="password" name="password" placeholder="Password" class="showpassword">
+            </div>
+            <div class="remembeMe"><input type="checkbox" value=""><span>Remember me</span></div>
+            <div class="clearfix clear"> 
+                <a href="register.html" class="log-twitter">Register</a>    
+                <input type="submit" name="submit" value="Log in">
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var oUlHNav=document.getElementById('hNavScroll');
+            var aLiHN=oUlHNav.getElementsByTagName('li');
+            var timer=null;
+            var timerh=null;
+            var timerL=null;
+            for(var i=0;i<aLiHN.length;i++){
+                aLiHN[i].index=i;
+                aLiHN[i].onmouseover=function(){
+                    this.style.top='-29px';
+                }
+                aLiHN[i].onmouseout=function(){
+                    // var a =this.index;
+                    // timer0=setTimeout(function(){
+                        this.style.top='0';
+                    // }, 500);
+                }
+            }
+            hHidden.onmouseover=hHiddenC.onclick=function(){
+                clearTimeout(timerh);
+                hHidden.style.display='block';
+                hHidden.style.position='fixed';
+            }
+            hHidden.onmouseout=function(){
+                timerh=setTimeout(function(){
+                    hHidden.style.display='none';
+                },1000)
+            }
+            hLogIn.onmouseover=hlogin.onclick=function(){
+                clearTimeout(timerL)
+                hLogIn.style.display='block';
+                hLogIn.style.position='fixed';
+            }
+            hLogIn.onmouseout=function(){
+                timerL=setTimeout(function(){
+                hLogIn.style.display="none";
+                }, 1000)
+            }
+            </script>
+<!-- main部分 -->
+    <div class="conTitle font ff2">
+        Contacts
+    </div>
+    <div class="conMap border12" id="dituContent"> </div>
+    <div class="conTitle font ff2">
+        Contact Form
+    </div>
+    <div class="conInput pr">
+        <input type="text" value="Name" id="Name" title="数字、字母、下划线在内的6-12个字符">
+        <input type="text" value="Email" id="Email">
+        <input type="text" value="Telephone" id="Telephone" title="请输入11位纯数字">
+    <textarea name="Messge" id="Message" cols="49" rows="6">Message...</textarea>
+    <button class="skin" id="conSubmit">Submit</button>
+    </div>
+<!-- footer部分 -->
+        <div class="bottom2-1 clear">
+            <div class="bottom2-2 clear">
+                <a href="#script"><h4>Lorem ipsum</h4></a>
+                <div class="bottom2-6"></div>
+                <div class="bottom2-7"></div>
+                <span>idunt, augue vitae sollicitudin commodo, quam elit varius est, et ornare ante massa quis tellus. Mauris nec lacinia nisl. Nulla eget mauris quis elit mollis ornare vitae ut odio.
+                </span>
+               <a href="#script"> <p>More→</p></a>
+            </div>
+            <div class="bottom2-3 clear">
+                <a href="#script"><h4>Lorem ipsum</h4></a>
+                <div class="bottom2-6"></div>
+                <div class="bottom2-7"></div>
+                <ul>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">>&#160;Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                </ul>
+            </div>
+            <div class="bottom2-4 clear">
+                <a href="#script"><h4>Lorem ipsum</h4></a>
+                <div class="bottom2-6"></div>
+                <div class="bottom2-7"></div>
+                <ul>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                    <li><a href="#script">Lorem ipsum dolor</a></li>
+                    <div class="bottom2-8"></div><br>
+                </ul>
+            </div>
+            <ul class="bottom2-5">
+                <li><img src="img/sina.jpg" alt=""><p>-官方微博-</p></li>
+                <li><img src="img/wechat.jpg" alt=""><p>-公众号-</p></li>
+            </ul>
+        </div>
+<!-- out部分 -->
+<!-- sideBarLeft部分 -->
+    <div class="sBL" id="sBL">
+        <span class="font">&nbsp;&nbsp;SKIN</span>
+        <p >change the skin</p>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<!-- sideBarRight部分 -->
+    <div class="sBRS" id="sBRS">
+        <img src="img/star2.png" title="收藏" alt="">
+    </div>
+    <script type="text/javascript">
+    sBRS.onmousedown = function(e){
+        var e = e || window.event;
+        var diffX = e.clientX - sBRS.offsetLeft;
+        var diffY = e.clientY - sBRS.offsetTop;
+        document.onmousemove = function(e){
+            var e = e||window.event;
+            sBRS.style.left = e.clientX - diffX + 'px';
+            sBRS.style.top = e.clientY -diffY + 'px';
+        }
+        document.onmouseup = function(){
+            document.onmousemove = null;
+            document.onmouseup = null;
+        }
+    }
+//         sBRS.onclick=function addFavorite() {
+//     var url = window.location;
+//     var title = document.title;
+//     var ua = navigator.userAgent.toLowerCase();
+
+//     if (ua.indexOf("360se") > -1) {
+//         alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+//     }
+//     else if (ua.indexOf("msie 8") > -1) {
+//         window.external.AddToFavoritesBar(url, title); //IE8
+//     }
+//     else if (document.all) {
+//   try{
+//    window.external.addFavorite(url, title);
+//   }catch(e){
+//    alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+//   }
+//     }
+//     else if (window.sidebar) {
+//         window.sidebar.addPanel(title, url, "");
+//     }
+//     else {
+//   alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+//     }
+// }
+        </script>
+    <a href="#" class="sBRA" id="sBRA">
+        <img src="img/airplane.png" title="ToTop" alt="">
+    </a>
+    <script type="text/javascript" src="js/contacts.js"></script>
+    <script type="text/javascript" src="js/changeSkin.js"></script>
+    </body>
+</html>
